@@ -1,0 +1,219 @@
+/* -------------------- FONTE -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+/* -------------------- CORES -------------------- */
+:root {
+    --primaria: #BFB7DA;
+    --secundaria: #E6E1F4;
+    --destaque: #7A6FBF;
+    --texto: #4A4A4A;
+    --fundo: #FFFFFF;
+}
+
+/* -------------------- RESET -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+/* -------------------- HEADER -------------------- */
+.topo {
+    background: var(--secundaria);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* -------------------- MENU -------------------- */
+.menu-principal {
+    background: var(--destaque);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 12px 0;
+}
+
+.menu-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Times New Roman", serif;
+}
+
+.menu-principal a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------- LAYOUT -------------------- */
+.conteudo {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.noticia-principal .destaque {
+    background: var(--secundaria);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #00000015;
+    text-decoration: none;
+    color: var(--texto);
+    display: block;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.noticia-principal .destaque img {
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #00000015;
+    text-decoration: none;
+    color: var(--texto);
+    display: bloc;
+    align-items: center;
+}
+
+.noticia-principal .destaque h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* -------------------- GRID DE NOTÍCIAS -------------------- */
+.mais-noticias {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: var(--secundaria);
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 0 8px #00000015;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+
+.sidebar section {
+    background: var(--secundaria);
+    width: 80%;
+    padding: 14px 18px;   /* diminui a caixa */
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 px #00000015;
+}
+
+.sidebar h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.sidebar ul,
+.sidebar ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* -------------------- BOTÃO CONTATO -------------------- */
+.botao-contato {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primaria);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.botao-contato img {
+    width: 23px;
+}
+
+.botao-contato:hover {
+    background: var(--destaque);
+}
+
+/* -------------------- FOOTER -------------------- */
+.rodape {
+    background: var(--primaria);
+    padding: 30px 40px;
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 60px;
+}
+
+/* -------------------- RESPONSIVO -------------------- */
+@media (max-width: 900px) {
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .mais-noticias {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LINKS DA SIDEBAR */
+.sidebar a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.leia-mais {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--destaque);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.leia-mais:hover {
+    color: #5a51a8;
+    text-decoration: underline;
+}

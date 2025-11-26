@@ -1,12 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contato - Purple Times">
+    <title>Purple Times - Contato</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title></title>
 </head>
+
 <body>
-    
+
+   <header class="topo">
+    <div class="logo-area">
+         <img src="img/Captura de tela 2025-11-19 132813.png" alt="Purple Times Logo">
+    </div>
+  </header>
+
+  <nav class="menu-principal">
+    <a href="index.html">Notícias</a>
+    <a href="#">Tecnologia</a>
+    <a href="#">Entretenimento</a>
+    <a href="#">Esportes</a>
+    <a href="#">Saúde</a>
+    <a href="#">Economia</a>
+    <a href="#">Educação</a>
+    <a href="#">Política</a>
+  </nav>
+
+    <main class="container contato-container">
+        <h1>Fale com a gente</h1>
+
+        <form class="form-contato" method="post" action="/submit" enctype="multipart/form-data" novalidate>
+            <div class="form-grid">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" required pattern="^[A-Za-zÀ-ÿ '´`-]{2,}$"
+                    placeholder="Seu nome">
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required placeholder="seu@email.com">
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="tel" required pattern="^\+?\d{10,15}$"
+                    placeholder="+5511999999999">
+
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">-- selecione --</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="parceria">Parceria</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label>Tipo de contato</label>
+                <div class="radios">
+                    <label><input type="radio" name="tipo" value="geral" checked> Geral</label>
+                    <label><input type="radio" name="tipo" value="midia"> Mídia</label>
+                    <label><input type="radio" name="tipo" value="parceria"> Parceria</label>
+                </div>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="6" required
+                    placeholder="Escreva sua mensagem..."></textarea>
+
+                <label for="arquivo">Anexo (opcional)</label>
+                <input id="arquivo" name="arquivo" type="file" accept=".pdf,.jpg,.png,.webp">
+
+                <label class="checkbox">
+                    <input type="checkbox" name="aceite" required> Eu li e aceito os termos de uso
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="reset" class="btn secundario">Limpar</button>
+                </div>
+            </div>
+        </form>
+
+        <section class="horario card">
+            <h2>Horário de Atendimento</h2>
+            <table class="tabela-horario">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Manhã</th>
+                        <th>Tarde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>09:00 - 12:00</td>
+                        <td>13:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Terça</td>
+                        <td>09:00 - 12:00</td>
+                        <td>13:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>09:00 - 12:00</td>
+                        <td>13:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta</td>
+                        <td>09:00 - 12:00</td>
+                        <td>13:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>09:00 - 12:00</td>
+                        <td>13:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td colspan="2">Fechado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>© 2025 Purple Times</p>
+            <div class="footer-icon">p</div>
+            <p><a href="#">Termos de uso</a> | <a href="#">Privacidade</a></p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
