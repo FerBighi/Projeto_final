@@ -44,8 +44,12 @@ body {
 }
 
 .figura-artigo img {
-    max-width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .figura-artigo figcaption {
@@ -55,7 +59,9 @@ body {
 }
 
 /* Cabeçalhos secundários */
-.artigo h2, .artigo h3, .artigo h4 {
+.artigo h2,
+.artigo h3,
+.artigo h4 {
     color: #7A6FBF;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -66,13 +72,16 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
-/* Galeria de imagens */
+.roxo {
+    color: #7A6FBF; /* roxinho lindo */
+    font-weight: bold;
+}
 .galeria {
     display: flex;
     gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 10px;
+    justify-content: center; /* CENTRALIZA */
+    flex-wrap: wrap; /* deixa quebrar linha se precisar */
+    padding: 10px;
     background-color: #F7F4FB;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -108,7 +117,7 @@ iframe {
 
 /* Seção de comentários */
 .comentarios {
-    background-color: #7A6FBF;
+    background-color: #C1B4DD;
     padding: 15px;
     border-radius: 8px;
     margin-top: 30px;
@@ -116,7 +125,7 @@ iframe {
 
 .comentarios h3 {
     margin-top: 0;
-    color: #BFB7DA;
+    color: #7A6FBF;
 }
 
 .comentarios form input,
@@ -124,22 +133,18 @@ iframe {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #C1B4DD;
+    border: 1px solid #7A6FBF;
     border-radius: 5px;
     font-family: 'Merriweather', serif;
 }
 
 .comentarios form button {
-    background-color: #C1B4DD;
+    background-color: #7A6FBF;
     color: #ffffff;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.comentarios form button:hover {
-    background-color: #BFB7DA;
 }
 
 /* Botão de voltar para o índice */
