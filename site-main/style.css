@@ -38,6 +38,12 @@ body {
     gap: 100px;
     padding: 12px 0;
 }
+@media(max-width: 768px){
+    .menu-principal {
+        flex-direction: column; /* menu empilha */
+        gap: 20px; /* mantém espaçamento grande visualmente */
+    }
+}
 
 .menu-principal a {
     color: #ffffff;
@@ -325,6 +331,19 @@ body {
     justify-content: center;
     cursor: pointer;
 }
+/* ------------------- BOTÃO DE CONTATO ------------------- */
+@media(max-width: 768px){
+    .botao-contato {
+        bottom: 15px; /* ajusta distância da tela */
+        right: 15px;
+        width: 40px; /* mantém visual mas levemente menor */
+        height: 40px;
+    }
+
+    .botao-contato img {
+        width: 20px; /* mantém proporcional */
+    }
+}
 
 .botao-contato img {
     width: 23px;
@@ -346,6 +365,16 @@ body {
 
 .footer-logo img {
     width: 90px;
+}
+/* ------------------- RODAPÉ ------------------- */
+@media(max-width: 768px){
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 900px) {

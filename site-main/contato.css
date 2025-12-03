@@ -111,3 +111,46 @@
 .btn.secundario:hover {
     background: #c4b0ff;
 }
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+
+    .contato-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contato-container h1 {
+        font-size: 24px; /* menor mas ainda destacado */
+    }
+
+    .form-contato {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* cada campo ocupa 100% da largura */
+        gap: 15px;
+    }
+
+    #mensagem,
+    #arquivo,
+    .checkbox,
+    .form-actions {
+        grid-column: span 1; /* se adapta ao novo grid de 1 coluna */
+    }
+
+    .form-actions {
+        flex-direction: column; /* botões empilhados */
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%; /* botões ocupam toda largura */
+        font-size: 15px;
+    }
+
+    .btn.secundario {
+        width: 100%;
+    }
+}

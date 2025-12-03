@@ -159,3 +159,42 @@ iframe {
 .voltar a:hover {
     color: #BFB7DA;
 }
+
+@media (max-width: 768px) {
+
+    .artigo {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .artigo h1 {
+        font-size: 1.6rem; /* menor, mas ainda destacado */
+    }
+
+    .manchete {
+        font-size: 1rem;
+    }
+
+    .galeria img {
+        width: 100%; /* ocupa largura total, quebra em coluna */
+        height: auto;
+    }
+
+    iframe {
+        height: 250px; /* vídeo proporcional menor em mobile */
+    }
+
+    .comentarios form input,
+    .comentarios form textarea {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .comentarios form button {
+        padding: 6px 12px;
+    }
+
+    .voltar a {
+        font-size: 14px;
+    }
+}
