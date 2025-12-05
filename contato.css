@@ -1,0 +1,227 @@
+/* ====== CONTAINER PRINCIPAL ====== */
+.contato-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+}
+
+/* ====== TÍTULO ====== */
+.contato-container h1 {
+    font-size: 32px;
+    color: #7A6FBF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ====== FORM ====== */
+.form-contato {
+    background: #faf7ff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(123, 66, 185, 0.15);
+    border: 1px solid #e6d8ff;
+}
+
+.form-titulo {
+    text-align: center;
+    color: #7A6FBF;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid label {
+    font-weight: bold;
+    color: #7A6FBF;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c7b4ff;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #ffffff;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus,
+.form-grid select:focus {
+    border-color: #8b3dff;
+    box-shadow: 0 0 5px 7A6FBF;
+}
+
+/* TEXTAREA EM FULL WIDTH */
+#mensagem {
+    grid-column: span 2;
+}
+
+/* ANEXO EM FULL */
+#arquivo {
+    grid-column: span 2;
+}
+
+/* CHECKBOX */
+.checkbox {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* RADIO */
+.radios {
+    display: flex;
+    gap: 10px;
+}
+
+/* BOTÕES */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn {
+    background: #7A6FBF;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #82799c;
+}
+
+.btn.secundario {
+    background: #d8c7ff;
+    color: #7A6FBF;
+}
+
+.btn.secundario:hover {
+    background: #c4b0ff;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+
+    .contato-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contato-container h1 {
+        font-size: 24px;
+        /* menor mas ainda destacado */
+    }
+
+    .form-contato {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        /* cada campo ocupa 100% da largura */
+        gap: 15px;
+    }
+
+    #mensagem,
+    #arquivo,
+    .checkbox,
+    .form-actions {
+        grid-column: span 1;
+        /* se adapta ao novo grid de 1 coluna */
+    }
+
+    .form-actions {
+        flex-direction: column;
+        /* botões empilhados */
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        /* botões ocupam toda largura */
+        font-size: 15px;
+    }
+
+    .btn.secundario {
+        width: 100%;
+    }
+}
+
+.horario-box {
+    background: #faf7ff;
+    border: 1px solid #e6d8ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(123, 66, 185, 0.15);
+}
+
+.horario-box h2 {
+    text-align: center;
+    color: #7A6FBF;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.horario-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.horario-tabela th {
+    background: #7A6FBF;
+    color: #fff;
+    padding: 10px;
+}
+
+.horario-tabela td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e6d8ff;
+}
+
+.horario-tabela tr:last-child td {
+    border-bottom: none;
+}
+
+.horario-tabela tr:nth-child(even) {
+    background: #f3ebff;
+}
+
+.form-contato {
+    margin-bottom: 50px;
+    /* separa o formulário do horário */
+}
+
+/* caixa da tabela */
+.horario-box {
+    background: #faf7ff;
+    border: 1px solid #e6d8ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(123, 66, 185, 0.15);
+}
