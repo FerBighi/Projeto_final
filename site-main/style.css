@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+    --primaria: #BFB7DA;
+    --secundaria: #E6E1F4;
+    --destaque: #7A6FBF;
+    --texto: #4A4A4A;
+    --fundo: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+.topo {
+    background: var(--secundaria);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu-principal {
+    background: var(--destaque);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 12px 0;
+}
+@media(max-width: 768px){
+    .menu-principal {
+        flex-direction: column; /* menu empilha */
+        gap: 20px; /* mantém espaçamento grande visualmente */
+    }
+}
+
+.menu-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Times New Roman", serif;
+}
+
+.menu-principal a:hover {
+    text-decoration: underline;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.noticia-principal .destaque {
+    background: var(--secundaria);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #00000015;
+    text-decoration: none;
+    color: var(--texto);
+    display: block;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.noticia-principal .destaque img {
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #00000015;
+    text-decoration: none;
+    color: var(--texto);
+    display: bloc;
+    align-items: center;
+}
+
+.noticia-principal .destaque h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mais-noticias {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: var(--secundaria);
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 0 8px #00000015;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+.sidebar section {
+    background: var(--fundo);
+    width: 100%;
+    border: 4px solid #BFB7DA;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 px #00000015;
+}
+
+.sidebar h3 {
+    margin-bottom: 12px;
+    color: #7A6FBF;
+    font-size: 17px;
+}
+
+.sidebar ul,
+.sidebar ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.extra-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.weather-box {
+    width: 100%;
+    background: #fff;
+    border: 4px solid #BFB7DA;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+}
+
+.weather-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.weather-city,
+.weather-rain {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.weather-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.weather-period {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.weather-period img {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 3px;
+}
+
+.weather-temp {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+
+.weather-link:hover {
+    text-decoration: underline;
+}
+
+.social-box,
+.newsletter-box {
+    flex: 1;
+    width: 100%;
+    background: #fff;
+    border: 4px solid #BFB7DA;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.social-box h3,
+.newsletter-box h3 {
+    color: #7A6FBF;
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+    margin-bottom: 12px;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 15px;
+}
+
+.icon-circle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    background: #BFB7DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon-circle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: none;
+}
+
+.newsletter-box p {
+    color: #4A4A4A;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #E6E1F4;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #7A6FBF;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.social-list a:hover .icon-circle {
+    background: #E6E1F4;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.95;
+}
+
+.frase-do-dia {
+  background-color: #f7f7f7; 
+  border-left: 4px solid #7A6FBF; 
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.frase-do-dia h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+
+@media (max-width:768px) {
+    .extra-section {
+        flex-direction: column;
+    }
+}
+
+
+.botao-contato {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--destaque);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* ------------------- BOTÃO DE CONTATO ------------------- */
+@media(max-width: 768px){
+    .botao-contato {
+        bottom: 15px; /* ajusta distância da tela */
+        right: 15px;
+        width: 40px; /* mantém visual mas levemente menor */
+        height: 40px;
+    }
+
+    .botao-contato img {
+        width: 20px; /* mantém proporcional */
+    }
+}
+
+.botao-contato img {
+    width: 23px;
+}
+
+.botao-contato:hover {
+    background: var(--destaque);
+}
+
+.rodape {
+    background: var(--primaria);
+    padding: 30px 40px;
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 90px;
+}
+/* ------------------- RODAPÉ ------------------- */
+@media(max-width: 768px){
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .mais-noticias {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sidebar a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.leia-mais {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--destaque);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.leia-mais:hover {
+    color: #5a51a8;
+    text-decoration: underline;
+}
